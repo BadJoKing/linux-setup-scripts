@@ -15,4 +15,8 @@ sudo apt --yes --force-yes install virtualbox
 sudo snap install blender --classic
 sudo snap install vlc
 sudo apt --yes --force-yes install python3.11*
-
+sudo apt install isenkram
+sudo isenkram-autoinstall-firmware
+sudo apt install linux-modules-iwlwifi-6*
+sudo apt install linux-wlan-ng-firmware
+sudo apt install bluez-firmware
