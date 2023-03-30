@@ -12,7 +12,6 @@ sudo rm /etc/apt/preferences.d/nosnap.pref
 sudo apt install snapd
 sudo snap install eclipse --classic
 sudo snap install discord
-sudo snap install blender
 sudo apt install --yes gimp
 sudo snap install libreoffice
 sudo snap install audacity
