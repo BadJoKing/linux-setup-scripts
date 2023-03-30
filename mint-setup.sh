@@ -19,5 +19,6 @@ sudo apt --yes --force-yes install virtualbox
 sudo snap install blender --classic
 sudo snap install vlc
 sudo apt --yes --force-yes install python3.11*
-
-
+sudo apt -y install openjdk-19-jdk
+sudo apt -y install gcc
+sudo curl https://sh.rustup.rs | sh
