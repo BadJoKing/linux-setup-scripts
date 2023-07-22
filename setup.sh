@@ -2,19 +2,21 @@
 sudo apt update
 sudo apt --yes full-upgrade
 sudo apt --yes install *linux-firmware*
-sudo apt --yes install steam
 sudo apt --yes install lutris
 #sudo apt --yes install wine
 sudo apt --yes install obs-studio
 sudo rm /etc/apt/preferences.d/nosnap.pref
 sudo apt -y install snapd
+sudo snap install steam
 sudo snap install discord
 sudo snap install libreoffice
 sudo snap install vlc
 sudo apt -y install openjdk-19-jdk
+sudo mkdir -pm755 /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
 sudo apt update
-sudo apt -y install --install-recommends winehq-stable
+sudo apt -y install --install-recommends winehq-devel
 sudo apt -y install winetricks
 sudo apt -y install proton*
 echo "Are you using a laptop?(Y/N)"
@@ -40,6 +42,7 @@ if [[ "${prog,,}" == "y" ]]; then
     sudo apt install python-is-python3
     sudo snap install eclipse --classic
     sudo apt -y install gcc
+    sudo apt -y install git
     sudo apt -y install codeblocks
     sudo curl https://sh.rustup.rs | sh
     sudo curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
