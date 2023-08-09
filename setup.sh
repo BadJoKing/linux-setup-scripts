@@ -4,6 +4,7 @@ sudo apt --yes full-upgrade
 sudo apt --yes install *linux-firmware*
 sudo apt --yes install lutris
 #sudo apt --yes install wine
+sudo apt install fontforge
 sudo apt --yes install obs-studio
 sudo rm /etc/apt/preferences.d/nosnap.pref
 sudo apt -y install snapd
