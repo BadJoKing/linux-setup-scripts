@@ -4,7 +4,6 @@ sudo apt --yes full-upgrade
 sudo apt --yes install *linux-firmware*
 sudo apt --yes install lutris
 #sudo apt --yes install wine
-sudo apt install fontforge
 sudo apt --yes install obs-studio
 sudo rm /etc/apt/preferences.d/nosnap.pref
 sudo apt -y install snapd
@@ -42,11 +41,28 @@ if [[ "${prog,,}" == "y" ]]; then
     sudo apt --yes install python3.11*
     sudo apt install python-is-python3
     sudo snap install eclipse --classic
+    sudo snap install code --classic
+    sudo apt -y install godot3
     sudo apt -y install gcc
     sudo apt -y install git
     sudo apt -y install codeblocks
     sudo curl https://sh.rustup.rs | sh
     sudo curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+fi
+echo "are you me?(Y/N)"
+read nerd
+if [ "${nerd,,}" == "y" ]; then
+	sudo snap install the-powder-toy
+	sudo apt install -y polyglot
+	sudo apt install -y lmms
+	sudo apt install -y freeciv*
+	sudo apt install -y notepadqq
+	sudo apt install -y caneda
+	sudo apt install -y gnusim8085
+	sudo apt install -y micropolis
+	sudo apt install -y fontforge
+	sudo apt install -y freecad
+	sudo apt install -y kicad
 fi
 sudo mkdir ~/bin/
 sudo cp ./setup.sh ~/bin
