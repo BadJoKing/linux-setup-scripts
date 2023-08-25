@@ -3,11 +3,11 @@ sudo apt update
 sudo apt --yes full-upgrade
 sudo apt --yes install *linux-firmware*
 sudo apt --yes install lutris
-#sudo apt --yes install wine
+sudo apt --yes install gparted
 sudo apt --yes install obs-studio
 sudo rm /etc/apt/preferences.d/nosnap.pref
 sudo apt -y install snapd
-sudo apt -y install steam
+sudo snap install steam
 sudo snap install discord
 sudo snap install libreoffice
 sudo snap install vlc
