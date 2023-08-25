@@ -60,7 +60,7 @@ if [ "${nerd,,}" == "y" ]; then
     sudo dpkg -i PolyGlot-Ins-Lin.deb
     sudo dpkg -i protonvpn-stable-release_1.0.3-2_all.deb
     sudo apt update
-    sudo apt install protonvpn
+    sudo apt -y install protonvpn
 	sudo snap install the-powder-toy
 	sudo apt install -y polyglot
 	sudo apt install -y lmms
@@ -72,6 +72,7 @@ if [ "${nerd,,}" == "y" ]; then
 	sudo apt install -y fontforge
 	sudo apt install -y freecad
 	sudo apt install -y kicad
+ 	curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash
 fi
 sudo mkdir ~/bin/
 sudo cp ./setup.sh ~/bin
@@ -82,4 +83,4 @@ echo "sudo apt upgrade" | sudo tee -a ~/bin/sys-update.sh
 sudo chmod +x ~/bin/setup.sh
 sudo chmod +x ~/bin/sys-update.sh
 echo "export PATH=$PATH:~/bin" >> ~/.bashrc
-sudo apt autoremove
+sudo apt -y autoremove
