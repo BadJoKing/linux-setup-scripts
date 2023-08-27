@@ -75,6 +75,9 @@ if [ "${nerd,,}" == "y" ]; then
 	curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash
 	sudo ln -s /lib/x86_64-linux-gnu/libssl.so.3 /lib/x86_64-linux-gnu/libssl.so.1.1
  	sudo ln -s /lib/x86_64-linux-gnu/libcrypto.so.3 /lib/x86_64-linux-gnu/libcrypto.so.1.1
+  	sudo add-apt-repository ppa:cappelikan/ppa
+	sudo apt update
+	sudo apt install mainline 
 fi
 sudo mkdir ~/bin/
 sudo cp ./setup.sh ~/bin
