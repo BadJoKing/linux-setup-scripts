@@ -22,45 +22,45 @@ sudo apt -y install proton*
 echo "Are you using a laptop?(Y/N)"
 read tlp
 if [[ "${tlp,,}" == "y" ]]; then
-    sudo add-apt-repository ppa:linrunner/tlp
-    sudo apt updates
-    sudo apt -y install tlp tlp-drw
-    sudo service tlp start
-    sudo snap install auto-cpufreq
-    sudo auto-cpufreq --install
-    sudo cp auto-cpufreq.conf /etc
-    sudo auto-cpufreq --config=/etc/auto-cpufreq.conf
+	sudo add-apt-repository ppa:linrunner/tlp
+	sudo apt updates
+	sudo apt -y install tlp tlp-drw
+	sudo service tlp start
+	sudo snap install auto-cpufreq
+	sudo auto-cpufreq --install
+	sudo cp auto-cpufreq.conf /etc
+	sudo auto-cpufreq --config=/etc/auto-cpufreq.conf
 fi
 echo "Do you want to install any Image/Audio editing utilities?(Y/N)"
 read pro
 if [[ "${pro,,}" == "y" ]]; then
-    sudo apt install --yes gimp
-    sudo snap install blender --classic
-    sudo snap install audacity
+	sudo apt install --yes gimp
+	sudo snap install blender --classic
+	sudo snap install audacity
 fi
 echo "Do you want any programming utilities?(Y/N)"
 read prog
 if [[ "${prog,,}" == "y" ]]; then
-    sudo apt --yes install virtualbox
-    sudo apt --yes install python3.11*
-    sudo apt install python-is-python3
-    sudo snap install eclipse --classic --candidate
-    sudo snap install code --classic
-    sudo apt -y install godot3
-    sudo apt -y install gcc
-    sudo apt -y install git
-    sudo apt -y install codeblocks
-    sudo curl https://sh.rustup.rs | sh
-    sudo curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+	sudo apt --yes install virtualbox
+	sudo apt --yes install python3.11*
+	sudo apt install python-is-python3
+	sudo snap install eclipse --classic --candidate
+	sudo snap install code --classic
+	sudo apt -y install godot3
+	sudo apt -y install gcc
+	sudo apt -y install git
+	sudo apt -y install codeblocks
+	sudo curl https://sh.rustup.rs | sh
+	sudo curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 fi
 echo "are you me?(Y/N)"
 read nerd
 if [ "${nerd,,}" == "y" ]; then
-    sudo wget https://github.com/DraqueT/PolyGlot/releases/download/3.5.1/PolyGlot-Ins-Lin.deb
-    sudo dpkg -i PolyGlot-Ins-Lin.deb
-    sudo dpkg -i protonvpn-stable-release_1.0.3-2_all.deb
-    sudo apt update
-    sudo apt -y install protonvpn
+	sudo wget https://github.com/DraqueT/PolyGlot/releases/download/3.5.1/PolyGlot-Ins-Lin.deb
+	sudo dpkg -i PolyGlot-Ins-Lin.deb
+	sudo dpkg -i protonvpn-stable-release_1.0.3-2_all.deb
+	sudo apt update
+	sudo apt -y install protonvpn
 	sudo snap install the-powder-toy
 	sudo apt install -y polyglot
 	sudo apt install -y lmms
@@ -72,7 +72,9 @@ if [ "${nerd,,}" == "y" ]; then
 	sudo apt install -y fontforge
 	sudo apt install -y freecad
 	sudo apt install -y kicad
- 	curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash
+	curl -L https://raw.githubusercontent.com/rust-lang/rustlings/main/install.sh | bash
+	sudo ln -s /lib/x86_64-linux-gnu/libssl.so.3 /lib/x86_64-linux-gnu/libssl.so.1.1
+ 	sudo ln -s /lib/x86_64-linux-gnu/libcrypto.so.3 /lib/x86_64-linux-gnu/libcrypto.so.1.1
 fi
 sudo mkdir ~/bin/
 sudo cp ./setup.sh ~/bin
