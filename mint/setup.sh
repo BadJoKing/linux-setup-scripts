@@ -77,7 +77,7 @@ if [ "${nerd,,}" == "y" ]; then
  	sudo ln -s /lib/x86_64-linux-gnu/libcrypto.so.3 /lib/x86_64-linux-gnu/libcrypto.so.1.1
   	sudo add-apt-repository ppa:cappelikan/ppa
 	sudo apt update
-	sudo apt install mainline 
+	sudo apt -y install mainline 
 fi
 sudo mkdir ~/bin/
 sudo cp ./setup.sh ~/bin
