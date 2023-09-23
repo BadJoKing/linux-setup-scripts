@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 echo "all log files are saved to ./setup.log"
+sleep 5
+echo "I'm gonna need some root access to run properly"
 sudo apt update
 sudo apt --yes full-upgrade 
 sudo apt --yes install *linux-firmware* 
