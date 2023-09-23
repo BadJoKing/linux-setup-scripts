@@ -27,17 +27,17 @@ read tlp
 if [[ "${tlp,,}" == "y" ]]; then
 	echo "installing and configuring tlp"
 	sudo add-apt-repository -y ppa:linrunner/tlp 
-	sudo apt update 
-	sudo apt -y install tlp 
- 	sudo cp tlp.conf /etc/tlp.d 
-	sudo tlp start 
- 	sudo systemctl enable tlp 
+	sudo apt update
+	sudo apt -y install tlp
+	sudo tlp start
+ 	sudo systemctl enable tlp
+  	sudo flatpak install -y --noninteractive tlpui
 fi
 echo "Do you want to install any Image/Audio editing utilities?(Y/N)"
-read pro
-if [ "${pro,,}" == "y" ]; then
+read img
+if [ "${img,,}" == "y" ]; then
 	echo echo "installing gimp, blender, audacity and kdenlive"
-	sudo apt install --yes gimp 
+	sudo apt install --yes gimp
 	sudo flatpak install -y --noninteractive org.blender.Blender 
 	sudo flatpak install -y --noninteractive org.audacityteam.Audacity 
  	sudo flatpak install -y --noninteractive org.kde.kdenlive 
