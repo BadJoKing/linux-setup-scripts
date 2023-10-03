@@ -52,7 +52,7 @@ if [ "${prog,,}" == "y" ]; then
 	sudo flatpak install -y --noninteractive org.eclipse.Java 
 	sudo flatpak install -y --noninteractive com.vscodium.codium 
 	sudo apt -y install godot3 
-	sudo apt -y install gcc 
+	sudo apt -y install gcc gcc-multilib
 	sudo apt -y install git 
 	sudo apt -y install codeblocks 
 	sudo curl https://sh.rustup.rs | sh
