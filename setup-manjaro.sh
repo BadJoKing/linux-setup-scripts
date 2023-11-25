@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-sudo pamac install --no-confirm $(pamac search -q linux-firmware) lutris obs-studio snapd
+sudo pamac install --no-confirm $(pamac search -q linux-firmware) lutris obs-studio
 sudo pamac install --no-confirm steam
 sudo pamac install --no-confirm discord
 sudo pamac install --no-confirm libreoffice
@@ -23,8 +23,8 @@ read prog
 if [ "${prog,,}" == "y" ]; then
     sudo pamac install --no-confirm virtualbox $(pamac search -q python)
     sudo ln -s /var/lib/snapd/snap /snap
-    sudo snap install eclipse --classic --candidate
-    sudo snap install code --classic
+    sudo pamac install --no-confirm eclipse-java
+    sudo pamac install --no-confirm vscodium
     sudo pamac install --no-confirm godot gcc git codeblocks
     sudo curl https://sh.rustup.rs | sh
     sudo curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
