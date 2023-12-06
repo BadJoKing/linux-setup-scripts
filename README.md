@@ -4,7 +4,7 @@ Also don't @ me if the code is about as terryble as this pun just now. I know an
 ## If you're running...
 * ...mint, Pop!_OS or any other Ubuntu based distro you can just use the script from the mint folder. Just remember to set its permissions so that it can be run as administrator
 * ...manjaro the setup_manjaro.sh file might work. Might also not, I don't care. 
-## Useful setup tipps I eencountered
+## Useful setup tipps I encountered
 ### for setting up a Canon Printer (Canon i-Sensys mf8050cn in my case) on Endeavouros / Arch / probably Manjaro, too
 You'll need to have the following packages:
 ```
