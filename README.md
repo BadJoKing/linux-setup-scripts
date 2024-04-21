@@ -11,6 +11,6 @@ You'll need to have the following packages:
 ufrii-print # Beware, the installation of this package takes ages, like at least half an hour even on fast systems, because they put it chock-full of test cases for stuff I don't even know how to pronounce
 ```
 So, basically what you have to do is, see if you can see your printer if you go into the software "Configure printers" (the 1st package from above) under "Add new printer" -> "Network Printers" -> the name of the printer in the side bar on the left. You might have to resize your window to fit the whole name, but at the end, in parentheses there should be some ip address. Something along the lines of 192.168.x.x. 
-Now the next thing you'll have to do is execute ```sudo cnsetuputil2```, go to "Add", choose your printer, click on "socket" and enter the IP address from before into the field "Hostname or IP-Address". Then click "Register" and you can print now.
-
+Now the next thing you'll have to do is execute ```sudo cnsetuputil2``` (if it doesn't do that by itself), go to "Add", choose your printer, click on "socket" and enter the IP address from before into the field "Hostname or IP-Address". Then click "Register" and you can print now.
+### Note to future self: install simulide via yay, if it doesn't work with paru.
 PS: Again. If something breaks on your system after running one of my scripts that's entirely on you. I take no responsibility for you not reading the code you execute.
