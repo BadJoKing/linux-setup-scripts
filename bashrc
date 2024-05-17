@@ -27,3 +27,9 @@ alias cmdstats="history | awk '{print $2}' | sort | uniq -c | sort -rn | head -5
 alias make='make -j $(nproc)'
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/opt/android-sdk/emulator:/opt/cuda/bin:/opt/cuda/nsight_compute:/opt/cuda/nsight_systems/bin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:'$HOME/.local/bin':/root/.local/share/gem/ruby/3.0.0/bin:$HOME/.rbenv/versions/3.0.0/bin/
 . "$HOME/.cargo/env"
+# Make make go vroom
+export GNUMAKEFLAGS=-j12
+# For Nix package stuff
+export NIX_REMOTE=daemon
+# for zluda
+export LD_LIBRARY_PATH="/home/terryblejokes/zluda":$LD_LIBRARY_PATH
