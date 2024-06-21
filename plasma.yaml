@@ -1,0 +1,18 @@
+impl: 'https://github.com/BadJoKing/linux-setup-scripts/raw/blendos-tracks'
+
+track: 'blendos-base'
+
+packages:
+  - 'kde-system-meta'
+  - 'kde-utilities-meta'
+  - 'plasma'
+  - 'plasma-workspace'
+  - 'sddm'
+  - 'waydroid'
+  - 'waydroid-image'
+
+services:
+  - 'sddm'
+
+commands:
+  - 'rm -f /usr/share/applications/Waydroid.desktop'
